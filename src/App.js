@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { CartProvider } from "./context/CartContext"
+import Pizza from './components/Pizza';
+import SideDishes from './components/SideDishes';
+import Drinks from './components/Drinks';
+import Desserts from './components/Desserts';
+import Cart from './components/Cart';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <CartProvider>
+            <div>
+                <h1>La Havre - Pizzeria</h1>
+                <div className="menu">
+                    <Pizza />
+                    <SideDishes />
+                    <Drinks />
+                    <Desserts />
+                </div>
+                <Cart />
+            </div>
+        </CartProvider>
+    );
 }
 
 export default App;
