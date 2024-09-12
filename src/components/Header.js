@@ -1,11 +1,21 @@
 // Header.js
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
+import CartModal from './Cart/CartModal';
 import './Header.css';
 
 const Header = () => {
     const { totalPrice } = useContext(CartContext);
+    const [showCartModal, setShowCartModal] = useState(false);
+
+    const handleOpenCart = () => {
+        setShowCartModal(true);
+    };
+
+    const handleCloseCart = () => {
+        setShowCartModal(false);
+    };
 
     return (
         <header className="header">
@@ -19,8 +29,9 @@ const Header = () => {
                 <Link to="/desserts">Desserts</Link>
             </nav>
             <div className="cart-info">
-                <span>Coș: {totalPrice} lei</span>
+                <span onClick={handleOpenCart}>Coș: {totalPrice} lei</span>
             </div>
+            <CartModal show={showCartModal} handleClose={handleCloseCart} />
         </header>
     );
 };

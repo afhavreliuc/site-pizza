@@ -7,8 +7,8 @@ const Desserts = () => {
     const { addToCart } = useContext(CartContext);
 
     const dessertsList = [
-        { id: 1, name: 'Tiramisu', price: 20 },
-        { id: 2, name: 'Cheesecake', price: 22 }
+        { id: 40, name: 'Tiramisu', price: 20 },
+        { id: 41, name: 'Cheesecake', price: 22 }
     ];
 
     return (

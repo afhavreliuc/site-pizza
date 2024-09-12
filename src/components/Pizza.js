@@ -7,9 +7,9 @@ const Pizza = () => {
     const { addToCart } = useContext(CartContext);
 
     const pizzaList = [
-        { id: 1, name: 'Margherita', price: 25 },
-        { id: 2, name: 'Pepperoni', price: 30 },
-        { id: 3, name: 'Quattro Stagioni', price: 35 }
+        { id: 10, name: 'Margherita', price: 25 },
+        { id: 11, name: 'Pepperoni', price: 30 },
+        { id: 12, name: 'Quattro Stagioni', price: 35 }
     ];
 
     return (

@@ -7,8 +7,8 @@ const SideDishes = () => {
     const { addToCart } = useContext(CartContext);
 
     const sidesList = [
-        { id: 1, name: 'Cartofi prăjiți', price: 10 },
-        { id: 2, name: 'Salată Caesar', price: 15 }
+        { id: 20, name: 'Cartofi prăjiți', price: 10 },
+        { id: 21, name: 'Salată Caesar', price: 15 }
     ];
 
     return (
