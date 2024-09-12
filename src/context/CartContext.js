@@ -48,11 +48,15 @@ export const CartProvider = ({ children }) => {
         );
     };
 
+    const clearCart = () => {
+        setCart([]); // Resetează coșul
+    };
+
     const totalPrice = cart.reduce((sum, product) => sum + product.price * product.quantity, 0);
 
     return (
         <CartContext.Provider
-            value={{ cart, addToCart, removeFromCart, incrementQuantity, decrementQuantity, totalPrice }}
+            value={{ cart, addToCart, removeFromCart, incrementQuantity, decrementQuantity, clearCart, totalPrice }}
         >
             {children}
         </CartContext.Provider>

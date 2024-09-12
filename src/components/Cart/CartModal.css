@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .modal-content p{
@@ -59,6 +60,12 @@
 
 .modal-content button:hover {
     background-color: #e03c00;
+}
+
+.cart-modal {
+    display: flex;
+    justify-content: space-between; /* Poziționează butoanele la capetele opuse */
+    margin-top: 20px;
 }
 
 .close-modal {

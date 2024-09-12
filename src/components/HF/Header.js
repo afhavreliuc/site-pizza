@@ -19,15 +19,17 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="logo">
-                <h1>La Havre Pizzeria</h1>
+            <div className="header-content">
+                <div className="logo">
+                    <h1>La Havre Pizzeria</h1>
+                </div>
+                <nav>
+                    <Link to="/pizza">Pizza</Link>
+                    <Link to="/side-dishes">Side Dishes</Link>
+                    <Link to="/drinks">Drinks</Link>
+                    <Link to="/desserts">Desserts</Link>
+                </nav>
             </div>
-            <nav>
-                <Link to="/pizza">Pizza</Link>
-                <Link to="/side-dishes">Side Dishes</Link>
-                <Link to="/drinks">Drinks</Link>
-                <Link to="/desserts">Desserts</Link>
-            </nav>
             <div className="cart-info">
                 <span onClick={handleOpenCart}>Coș: {totalPrice} lei</span>
             </div>

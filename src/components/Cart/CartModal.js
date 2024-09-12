@@ -4,11 +4,20 @@ import { CartContext } from '../../context/CartContext';
 import './CartModal.css';
 
 const CartModal = ({ show, handleClose }) => {
-    const { cart, incrementQuantity, decrementQuantity, totalPrice } = useContext(CartContext);
+    const { cart, incrementQuantity, decrementQuantity, clearCart ,totalPrice } = useContext(CartContext);
 
     if (!show) {
         return null; // Nu afișează nimic dacă modalul nu este activ
     }
+
+    const handlePay = () => {
+        if(totalPrice)
+            alert('Felicitări! Comanda dvs. a fost plasată cu succes!');
+        else
+            alert('Inca nu ati ales ceva sa cumparati!')
+        clearCart(); // Resetăm coșul
+        handleClose()
+    };
 
     return (
         <div className="modal-overlay">
@@ -32,7 +41,14 @@ const CartModal = ({ show, handleClose }) => {
                 <div className="total-price">
                     <strong>Total: {totalPrice} lei</strong>
                 </div>
-                <button onClick={handleClose} className="close-modal">Închide</button>
+                <div className="cart-modal">
+                    <button className="pay-button" onClick={handlePay}>
+                        Plătiți
+                    </button>
+                    <button className="close-button" onClick={handleClose}>
+                        Închide
+                    </button>
+                </div>
             </div>
         </div>
     );

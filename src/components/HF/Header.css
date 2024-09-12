@@ -1,6 +1,6 @@
 /* Header.css */
 .header {
-    z-index: 1000; /* Asigură-te că este deasupra altor elemente */
+    z-index: 1000;
     background-color: #ff4500;
     color: white;
     display: flex;
@@ -10,11 +10,19 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
 .logo h1 {
     font-family: 'Brush Script MT', cursive;
 }
 
 nav {
+    margin-left: 20px;
     display: flex;
     gap: 20px;
 }
@@ -31,6 +39,7 @@ nav a:hover {
 }
 
 .cart-info {
+    margin-right: 20px;
     font-size: 18px;
     font-weight: bold;
 }
