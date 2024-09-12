@@ -6,7 +6,9 @@ import Pizza from './components/Pizza';
 import SideDishes from './components/SideDishes';
 import Drinks from './components/Drinks';
 import Desserts from './components/Desserts';
-import Header from './components/Header';
+import Header from './components/HF/Header';
+import Footer from './components/HF/Footer'; // Importăm footer-ul
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
                       <Route path="/desserts" element={<Desserts />} />
                   </Routes>
               </div>
+              <Footer />
           </Router>
       </CartProvider>
   );

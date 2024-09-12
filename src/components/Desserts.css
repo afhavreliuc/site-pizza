@@ -1,5 +1,6 @@
 /* Desserts.css */
 .desserts-page {
+    min-height: 100vh; /* Ocupă întreaga înălțime a ecranului */
     padding: 20px;
     background-color: #ffe6e6;
 }

@@ -1,5 +1,6 @@
 /* SideDishes.css */
 .side-dishes-page {
+    min-height: 100vh; /* Ocupă întreaga înălțime a ecranului */
     padding: 20px;
     background-color: #ffebcc;
 }

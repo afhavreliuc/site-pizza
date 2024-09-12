@@ -1,9 +1,9 @@
 // Header.js
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../context/CartContext';
-import CartModal from './Cart/CartModal';
-import './Header.css';
+import { CartContext } from '../../context/CartContext';
+import CartModal from '../Cart/CartModal';
+import './Header.css'
 
 const Header = () => {
     const { totalPrice } = useContext(CartContext);
