@@ -1,6 +1,7 @@
 // Drinks.js
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import "./Drinks.css"
 
 const Drinks = () => {
     const { addToCart } = useContext(CartContext);
@@ -12,7 +13,7 @@ const Drinks = () => {
     ];
 
     return (
-        <div>
+        <div className='drinks-page'>
             <h2>Băuturi</h2>
             <ul>
                 {drinksList.map(drink => (

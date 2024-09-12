@@ -1,6 +1,7 @@
 // Pizza.js
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import './Pizza.css';
 
 const Pizza = () => {
     const { addToCart } = useContext(CartContext);
@@ -12,8 +13,8 @@ const Pizza = () => {
     ];
 
     return (
-        <div>
-            <h2>Pizza</h2>
+        <div className="pizza-page">
+            <h2>Pizzas</h2>
             <ul>
                 {pizzaList.map(pizza => (
                     <li key={pizza.id}>

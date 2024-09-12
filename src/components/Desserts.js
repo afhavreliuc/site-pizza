@@ -1,6 +1,7 @@
 // Desserts.js
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import "./Desserts.css"
 
 const Desserts = () => {
     const { addToCart } = useContext(CartContext);
@@ -11,7 +12,7 @@ const Desserts = () => {
     ];
 
     return (
-        <div>
+        <div className='desserts-page'>
             <h2>Deserturi</h2>
             <ul>
                 {dessertsList.map(dessert => (

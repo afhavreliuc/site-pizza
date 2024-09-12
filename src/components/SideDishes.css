@@ -1,0 +1,41 @@
+/* SideDishes.css */
+.side-dishes-page {
+    padding: 20px;
+    background-color: #ffebcc;
+}
+
+.side-dishes-page h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.side-dishes-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-dishes-page li {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.side-dishes-page button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.side-dishes-page button:hover {
+    background-color: #e03c00;
+}

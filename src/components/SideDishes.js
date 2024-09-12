@@ -1,6 +1,7 @@
 // SideDishes.js
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import "./SideDishes.css"
 
 const SideDishes = () => {
     const { addToCart } = useContext(CartContext);
@@ -11,7 +12,7 @@ const SideDishes = () => {
     ];
 
     return (
-        <div>
+        <div className="side-dishes-page">
             <h2>Side Dishes</h2>
             <ul>
                 {sidesList.map(side => (
